@@ -1,11 +1,11 @@
 use v6.c;
-unit module P5sleep:ver<0.0.2>;
+unit module P5sleep:ver<0.0.3>;
 
 proto sub sleep(|) is export {*}
-multi sub sleep()         { CORE::<&sleep>() }
+multi sub sleep() { &CORE::sleep() }
 multi sub sleep($seconds) {
     my $then = now;
-    CORE::<&sleep>($seconds.Int);
+    &CORE::sleep($seconds.Int);
     (now - $then).Int
 }
 

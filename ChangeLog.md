@@ -5,3 +5,6 @@ Initial implementation.
 Make sure we respect the Int-ness of sleep() on Perl 5.  Only the sleep()
 exported by Time::Hires knows about fractional sleep times.  Zoffix++ for
 pointing that out.
+
+# Version 0.0.3
+Resolve the original sleep() at compile time.
