@@ -2,7 +2,7 @@ use v6.c;
 unit module P5sleep:ver<0.0.1>;
 
 proto sub sleep(|) is export {*}
-multi sub sleep()         { sleep }
+multi sub sleep()         { CORE::<&sleep>() }
 multi sub sleep($seconds) { my $then = now; CORE::<&sleep>($seconds); now - $then }
 
 =begin pod
