@@ -15,6 +15,11 @@ DESCRIPTION
 
 This module tries to mimic the behaviour of the `sleep` of Perl 5 as closely as possible.
 
+head
+====
+
+
+
 AUTHOR
 ======
 

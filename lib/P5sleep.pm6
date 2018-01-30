@@ -1,9 +1,13 @@
 use v6.c;
-unit module P5sleep:ver<0.0.1>;
+unit module P5sleep:ver<0.0.2>;
 
 proto sub sleep(|) is export {*}
 multi sub sleep()         { CORE::<&sleep>() }
-multi sub sleep($seconds) { my $then = now; CORE::<&sleep>($seconds); now - $then }
+multi sub sleep($seconds) {
+    my $then = now;
+    CORE::<&sleep>($seconds.Int);
+    (now - $then).Int
+}
 
 =begin pod
 
@@ -19,6 +23,8 @@ P5sleep - Implement Perl 5's sleep() built-in
 
 This module tries to mimic the behaviour of the C<sleep> of Perl 5 as closely as
 possible.
+
+=head
 
 =head1 AUTHOR
 
