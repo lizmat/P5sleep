@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5sleep:ver<0.0.5>;
+unit module P5sleep:ver<0.0.6>:auth<cpan:ELIZABETH>;
 
 proto sub sleep(|) is export {*}
 multi sub sleep() { &CORE::sleep() }

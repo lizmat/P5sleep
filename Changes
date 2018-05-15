@@ -2,6 +2,9 @@ Revision history for P5sleep
 
 {{$NEXT}}
 
+0.0.6  2018-05-15T19:44:31+02:00
+    - add authority information
+
 0.0.5  2018-04-28T09:33:11+02:00
     - simplify sleep return value logic using sleep-timer
     - remove some pod droppings
