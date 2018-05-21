@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5sleep:ver<0.0.6>:auth<cpan:ELIZABETH>;
+unit module P5sleep:ver<0.0.7>:auth<cpan:ELIZABETH>;
 
 proto sub sleep(|) is export {*}
 multi sub sleep() { &CORE::sleep() }
@@ -20,8 +20,43 @@ P5sleep - Implement Perl 5's sleep() built-in
 
 =head1 DESCRIPTION
 
-This module tries to mimic the behaviour of the C<sleep> of Perl 5 as closely as
-possible.
+This module tries to mimic the behaviour of the C<sleep> function of Perl 5
+as closely as possible.
+
+=head1 ORIGINAL PERL 5 DOCUMENTATION
+
+    sleep EXPR
+    sleep   Causes the script to sleep for (integer) EXPR seconds, or forever
+            if no argument is given. Returns the integer number of seconds
+            actually slept.
+
+            May be interrupted if the process receives a signal such as
+            "SIGALRM".
+
+                eval {
+                    local $SIG{ALARM} = sub { die "Alarm!\n" };
+                    sleep;
+                };
+                die $@ unless $@ eq "Alarm!\n";
+
+            You probably cannot mix "alarm" and "sleep" calls, because "sleep"
+            is often implemented using "alarm".
+
+            On some older systems, it may sleep up to a full second less than
+            what you requested, depending on how it counts seconds. Most
+            modern systems always sleep the full amount. They may appear to
+            sleep longer than that, however, because your process might not be
+            scheduled right away in a busy multitasking system.
+
+            For delays of finer granularity than one second, the Time::HiRes
+            module (from CPAN, and starting from Perl 5.8 part of the standard
+            distribution) provides usleep(). You may also use Perl's
+            four-argument version of select() leaving the first three
+            arguments undefined, or you might be able to use the "syscall"
+            interface to access setitimer(2) if your system supports it. See
+            perlfaq8 for details.
+
+            See also the POSIX module's "pause" function.
 
 =head1 AUTHOR
 

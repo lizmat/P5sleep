@@ -2,12 +2,15 @@ Revision history for P5sleep
 
 {{$NEXT}}
 
+0.0.7  2018-05-21T21:43:26+02:00
+    - Added original Perl 5 documentation
+
 0.0.6  2018-05-15T19:44:31+02:00
-    - add authority information
+    - Added authority information
 
 0.0.5  2018-04-28T09:33:11+02:00
-    - simplify sleep return value logic using sleep-timer
-    - remove some pod droppings
+    - Simplify sleep return value logic using sleep-timer
+    - Remove some pod droppings
 
 0.0.4  2018-04-11T16:34:31+02:00
     - Follow App:Mi6's default Changes format
