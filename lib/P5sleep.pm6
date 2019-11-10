@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5sleep:ver<0.0.7>:auth<cpan:ELIZABETH>;
+unit module P5sleep:ver<0.0.8>:auth<cpan:ELIZABETH>;
 
 proto sub sleep(|) is export {*}
 multi sub sleep() { &CORE::sleep() }
@@ -12,7 +12,7 @@ multi sub sleep(Int() $seconds) {
 
 =head1 NAME
 
-P5sleep - Implement Perl 5's sleep() built-in
+P5sleep - Implement Perl's sleep() built-in
 
 =head1 SYNOPSIS
 
@@ -20,10 +20,10 @@ P5sleep - Implement Perl 5's sleep() built-in
 
 =head1 DESCRIPTION
 
-This module tries to mimic the behaviour of the C<sleep> function of Perl 5
+This module tries to mimic the behaviour of the C<sleep> function of Perl
 as closely as possible.
 
-=head1 ORIGINAL PERL 5 DOCUMENTATION
+=head1 ORIGINAL PERL DOCUMENTATION
 
     sleep EXPR
     sleep   Causes the script to sleep for (integer) EXPR seconds, or forever
@@ -67,9 +67,9 @@ Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018 Elizabeth Mattijsen
+Copyright 2018-2019 Elizabeth Mattijsen
 
-Re-imagined from Perl 5 as part of the CPAN Butterfly Plan.
+Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
