@@ -1,23 +1,27 @@
 {
-  "auth" : "cpan:ELIZABETH",
-  "authors" : [
+  "auth": "cpan:ELIZABETH",
+  "authors": [
     "Elizabeth Mattijsen"
   ],
-  "build-depends" : [ ],
-  "depends" : [ ],
-  "description" : "Implement Perl's sleep() built-in",
-  "license" : "Artistic-2.0",
-  "name" : "P5sleep",
-  "perl" : "6.c",
-  "provides" : {
-    "P5sleep" : "lib/P5sleep.pm6"
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Raku port of Perl's sleep() built-in",
+  "license": "Artistic-2.0",
+  "name": "P5sleep",
+  "perl": "6.c",
+  "provides": {
+    "P5sleep": "lib/P5sleep.pm6"
   },
-  "resources" : [ ],
-  "source-url" : "https://github.com/lizmat/P5sleep.git",
-  "tags" : [
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/P5sleep.git",
+  "tags": [
     "PERL5",
     "CPAN5"
   ],
-  "test-depends" : [ ],
-  "version" : "0.0.8"
+  "test-depends": [
+  ],
+  "version": "0.0.9"
 }

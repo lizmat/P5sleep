@@ -1,6 +1,6 @@
-use v6.c;
+use v6.*;
 
-unit module P5sleep:ver<0.0.8>:auth<cpan:ELIZABETH>;
+unit module P5sleep:ver<0.0.9>:auth<cpan:ELIZABETH>;
 
 proto sub sleep(|) is export {*}
 multi sub sleep() { &CORE::sleep() }
@@ -12,7 +12,7 @@ multi sub sleep(Int() $seconds) {
 
 =head1 NAME
 
-P5sleep - Implement Perl's sleep() built-in
+Raku port of Perl's sleep() built-in
 
 =head1 SYNOPSIS
 
@@ -20,8 +20,8 @@ P5sleep - Implement Perl's sleep() built-in
 
 =head1 DESCRIPTION
 
-This module tries to mimic the behaviour of the C<sleep> function of Perl
-as closely as possible.
+This module tries to mimic the behaviour of Perl's C<sleep> built-in as
+closely as possible in the Raku Programming Language.
 
 =head1 ORIGINAL PERL DOCUMENTATION
 
@@ -67,10 +67,12 @@ Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018-2019 Elizabeth Mattijsen
+Copyright 2018-2020 Elizabeth Mattijsen
 
 Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
 =end pod
+
+# vim: expandtab shiftwidth=4

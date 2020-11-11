@@ -1,7 +1,7 @@
 NAME
 ====
 
-P5sleep - Implement Perl's sleep() built-in
+Raku port of Perl's sleep() built-in
 
 SYNOPSIS
 ========
@@ -11,7 +11,7 @@ SYNOPSIS
 DESCRIPTION
 ===========
 
-This module tries to mimic the behaviour of the `sleep` function of Perl as closely as possible.
+This module tries to mimic the behaviour of Perl's `sleep` built-in as closely as possible in the Raku Programming Language.
 
 ORIGINAL PERL DOCUMENTATION
 ===========================
@@ -59,7 +59,7 @@ Source can be located at: https://github.com/lizmat/P5sleep . Comments and Pull 
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018-2019 Elizabeth Mattijsen
+Copyright 2018-2020 Elizabeth Mattijsen
 
 Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
