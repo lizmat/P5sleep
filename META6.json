@@ -1,5 +1,5 @@
 {
-  "auth": "cpan:ELIZABETH",
+  "auth": "zef:lizmat",
   "authors": [
     "Elizabeth Mattijsen"
   ],
@@ -12,7 +12,7 @@
   "name": "P5sleep",
   "perl": "6.c",
   "provides": {
-    "P5sleep": "lib/P5sleep.pm6"
+    "P5sleep": "lib/P5sleep.rakumod"
   },
   "resources": [
   ],
@@ -23,5 +23,5 @@
   ],
   "test-depends": [
   ],
-  "version": "0.0.9"
+  "version": "0.0.10"
 }
